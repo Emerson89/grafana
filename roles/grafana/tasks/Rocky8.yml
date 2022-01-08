@@ -1,0 +1,34 @@
+---
+# tasks file for grafana
+
+  - name: Adding repository grafana
+    template:
+      src: grafana.repo.j2
+      dest: /etc/yum.repos.d/grafana.repo
+
+  - name: Install grafana
+    yum:
+      name: grafana
+      state: present
+
+  - name : Inserindo  Plugins Default Zabbix
+    shell: grafana-cli plugins install alexanderzobnin-zabbix-app
+
+  - name: Config grafana
+    service:
+      name: grafana-server
+      state: started
+      enabled: yes
+
+  - name: import dashboards
+    uri:
+      url: http://localhost:3000/api/dashboards/db
+      method: POST
+      user: "admin"
+      password: "admin"
+      body: "{{ lookup('template', item.file) }}"
+      status_code: 200
+      body_format: json
+      force_basic_auth: yes
+    with_items: "{{ grafana.dashboards }}"
+      

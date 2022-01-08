@@ -1,0 +1,4 @@
+---
+# defaults file for grafana
+grafana_port: 3000
+repo_grafana: deb https://packages.grafana.com/oss/deb stable main

@@ -1,0 +1,291 @@
+{
+ "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 5,
+    "iteration": 1616009197457,
+    "links": [],
+    "panels": [
+      {
+        "ackEventColor": "rgb(56, 219, 156)",
+        "ackField": true,
+        "ageField": false,
+        "customLastChangeFormat": false,
+        "datasource": "Zabbix",
+        "descriptionAtNewLine": false,
+        "descriptionField": true,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fontSize": "100%",
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "highlightBackground": false,
+        "highlightNewEvents": false,
+        "highlightNewerThan": "1h",
+        "hostField": true,
+        "hostGroups": false,
+        "hostProxy": false,
+        "hostTechNameField": false,
+        "id": 4,
+        "lastChangeFormat": "",
+        "layout": "table",
+        "limit": 100,
+        "markAckEvents": false,
+        "okEventColor": "rgb(56, 189, 113)",
+        "pageSize": 10,
+        "problemTimeline": true,
+        "resizedColumns": [],
+        "schemaVersion": 8,
+        "severityField": true,
+        "showTags": true,
+        "sortProblems": "lastchange",
+        "statusField": true,
+        "statusIcon": false,
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$group"
+            },
+            "host": {
+              "filter": "$host"
+            },
+            "item": {
+              "filter": ""
+            },
+            "options": {
+              "acknowledged": 2,
+              "disableDataAlignment": false,
+              "hostProxy": false,
+              "hostsInMaintenance": false,
+              "limit": 1001,
+              "minSeverity": 0,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "sortProblems": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": 5,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "showProblems": "problems",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Alertas",
+        "triggerSeverity": [
+          {
+            "$$hashKey": "object:40",
+            "color": "rgb(108, 108, 108)",
+            "priority": 0,
+            "severity": "Not classified",
+            "show": true
+          },
+          {
+            "$$hashKey": "object:41",
+            "color": "rgb(120, 158, 183)",
+            "priority": 1,
+            "severity": "Information",
+            "show": true
+          },
+          {
+            "$$hashKey": "object:42",
+            "color": "rgb(175, 180, 36)",
+            "priority": 2,
+            "severity": "Warning",
+            "show": true
+          },
+          {
+            "$$hashKey": "object:43",
+            "color": "rgb(255, 137, 30)",
+            "priority": 3,
+            "severity": "Average",
+            "show": true
+          },
+          {
+            "$$hashKey": "object:44",
+            "color": "rgb(255, 101, 72)",
+            "priority": 4,
+            "severity": "High",
+            "show": true
+          },
+          {
+            "$$hashKey": "object:45",
+            "color": "rgb(215, 0, 0)",
+            "priority": 5,
+            "severity": "Disaster",
+            "show": true
+          }
+        ],
+        "type": "alexanderzobnin-zabbix-triggers-panel"
+      }
+    ],
+    "schemaVersion": 27,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": "Zabbix",
+          "definition": "*",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "Group",
+          "multi": false,
+          "name": "group",
+          "options": [],
+          "query": "*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": "Zabbix Server",
+            "value": "Zabbix Server"
+          },
+          "datasource": "Zabbix",
+          "definition": "Zabbix - host",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": "Host",
+          "multi": false,
+          "name": "host",
+          "options": [
+            {
+              "selected": false,
+              "text": "ALB - 2Listen Prod",
+              "value": "ALB - 2Listen Prod"
+            },
+            {
+              "selected": false,
+              "text": "ALB - 2listen-homolog-admin",
+              "value": "ALB - 2listen-homolog-admin"
+            },
+            {
+              "selected": false,
+              "text": "RDS - 2listen-dev",
+              "value": "RDS - 2listen-dev"
+            },
+            {
+              "selected": false,
+              "text": "RDS - 2listen-hmg",
+              "value": "RDS - 2listen-hmg"
+            },
+            {
+              "selected": false,
+              "text": "RDS - 2listen-prod",
+              "value": "RDS - 2listen-prod"
+            },
+            {
+              "selected": true,
+              "text": "Zabbix Server",
+              "value": "Zabbix Server"
+            }
+          ],
+          "query": {
+            "application": "",
+            "group": "$group",
+            "host": "/.*/",
+            "item": "",
+            "queryType": "host"
+          },
+          "refresh": 0,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "id": null,
+    "title": "Dashboard - Alertas",
+    "uid": "ZWOW810Zz",
+    "version": 4
+  },
+  "overwrite": true
+}

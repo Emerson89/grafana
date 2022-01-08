@@ -1,0 +1,1331 @@
+{
+ "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 1,
+    "iteration": 1616006916089,
+    "links": [],
+    "panels": [
+      {
+        "collapsed": false,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 29,
+        "panels": [],
+        "repeat": null,
+        "title": "Servidores",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 24,
+          "x": 0,
+          "y": 1
+        },
+        "id": 2,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "$hostsServidores",
+            "url": "/d/fSSXWx_iz/status-servidores?var-hosts=$hostsServidores&var-grupo=All"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeat": "hostsServidores",
+        "repeatDirection": "h",
+        "scopedVars": {
+          "hostsServidores": {
+            "selected": false,
+            "text": "Zabbix Server",
+            "value": "Zabbix Server"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$grupoServidores"
+            },
+            "host": {
+              "filter": "$hostsServidores"
+            },
+            "item": {
+              "filter": "Agent ping"
+            },
+            "mode": 4,
+            "options": {
+              "showDisabledItems": false,
+              "skipEmptyValues": false
+            },
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$hostsServidores",
+        "transparent": true,
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "collapsed": false,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 4
+        },
+        "id": 56,
+        "panels": [],
+        "repeat": null,
+        "title": "Monitoramento $grupoRDS",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 8,
+          "x": 0,
+          "y": 5
+        },
+        "id": 58,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Status - $hostsRDS",
+            "url": "/d/oC1PJb_mk/status-servidores-rds?var-hosts=$hostsRDS&var-grupo=$grupoRDS"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeat": "hostsRDS",
+        "repeatDirection": "h",
+        "scopedVars": {
+          "hostsRDS": {
+            "selected": false,
+            "text": "RDS - 2listen-dev",
+            "value": "RDS - 2listen-dev"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": 15,
+          "ymin": 10
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$grupoRDS"
+            },
+            "host": {
+              "filter": "$hostsRDS"
+            },
+            "item": {
+              "filter": ""
+            },
+            "mode": 4,
+            "options": {
+              "showDisabledItems": false,
+              "skipEmptyValues": false
+            },
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$hostsRDS",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 8,
+          "x": 8,
+          "y": 5
+        },
+        "id": 293,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Status - $hostsRDS",
+            "url": "/d/oC1PJb_mk/status-servidores-rds?var-hosts=$hostsRDS&var-grupo=$grupoRDS"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeatDirection": "h",
+        "repeatIteration": 1616006916089,
+        "repeatPanelId": 58,
+        "scopedVars": {
+          "hostsRDS": {
+            "selected": false,
+            "text": "RDS - 2listen-hmg",
+            "value": "RDS - 2listen-hmg"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": 15,
+          "ymin": 10
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$grupoRDS"
+            },
+            "host": {
+              "filter": "$hostsRDS"
+            },
+            "item": {
+              "filter": ""
+            },
+            "mode": 4,
+            "options": {
+              "showDisabledItems": false,
+              "skipEmptyValues": false
+            },
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$hostsRDS",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 8,
+          "x": 16,
+          "y": 5
+        },
+        "id": 294,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "Status - $hostsRDS",
+            "url": "/d/oC1PJb_mk/status-servidores-rds?var-hosts=$hostsRDS&var-grupo=$grupoRDS"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeatDirection": "h",
+        "repeatIteration": 1616006916089,
+        "repeatPanelId": 58,
+        "scopedVars": {
+          "hostsRDS": {
+            "selected": false,
+            "text": "RDS - 2listen-prod",
+            "value": "RDS - 2listen-prod"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": 15,
+          "ymin": 10
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$grupoRDS"
+            },
+            "host": {
+              "filter": "$hostsRDS"
+            },
+            "item": {
+              "filter": ""
+            },
+            "mode": 4,
+            "options": {
+              "showDisabledItems": false,
+              "skipEmptyValues": false
+            },
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$hostsRDS",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "collapsed": true,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 8
+        },
+        "id": 146,
+        "panels": [
+          {
+            "cacheTimeout": null,
+            "colorBackground": true,
+            "colorValue": false,
+            "colors": [
+              "#299c46",
+              "rgba(237, 129, 40, 0.89)",
+              "#d44a3a"
+            ],
+            "datasource": null,
+            "fieldConfig": {
+              "defaults": {
+                "custom": {}
+              },
+              "overrides": []
+            },
+            "format": "none",
+            "gauge": {
+              "maxValue": 100,
+              "minValue": 0,
+              "show": false,
+              "thresholdLabels": false,
+              "thresholdMarkers": true
+            },
+            "gridPos": {
+              "h": 3,
+              "w": 2,
+              "x": 0,
+              "y": 9
+            },
+            "id": 148,
+            "interval": null,
+            "links": [
+              {
+                "targetBlank": true,
+                "title": "Status - $applicationURL",
+                "url": "/d/IzSwdJumk/status-url?var-url=$applicationURL"
+              }
+            ],
+            "mappingType": 1,
+            "mappingTypes": [
+              {
+                "name": "value to text",
+                "value": 1
+              },
+              {
+                "name": "range to text",
+                "value": 2
+              }
+            ],
+            "maxDataPoints": 100,
+            "maxPerRow": 12,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+              {
+                "from": "null",
+                "text": "N/A",
+                "to": "null"
+              }
+            ],
+            "repeat": "applicationURL",
+            "repeatDirection": "h",
+            "sparkline": {
+              "fillColor": "rgba(31, 118, 189, 0.18)",
+              "full": false,
+              "lineColor": "rgb(31, 120, 193)",
+              "show": false,
+              "ymax": null,
+              "ymin": null
+            },
+            "tableColumn": "",
+            "targets": [
+              {
+                "application": {
+                  "filter": "$applicationURL"
+                },
+                "functions": [],
+                "group": {
+                  "filter": "$grupoURL"
+                },
+                "host": {
+                  "filter": "$hostsURL"
+                },
+                "item": {
+                  "filter": ""
+                },
+                "mode": 4,
+                "options": {
+                  "showDisabledItems": false,
+                  "skipEmptyValues": false
+                },
+                "refId": "A",
+                "resultFormat": "time_series",
+                "table": {
+                  "skipEmptyValues": false
+                },
+                "triggers": {
+                  "acknowledged": 2,
+                  "count": true,
+                  "minSeverity": 3
+                }
+              }
+            ],
+            "thresholds": "1,2",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "$applicationURL",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+              {
+                "op": "=",
+                "text": "N/A",
+                "value": "null"
+              }
+            ],
+            "valueName": "current"
+          }
+        ],
+        "title": "Monitoramento URL",
+        "type": "row"
+      },
+      {
+        "collapsed": false,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 9
+        },
+        "id": 290,
+        "panels": [],
+        "title": "Outros",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 12,
+          "x": 0,
+          "y": 10
+        },
+        "id": 292,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "$outrosHosts",
+            "url": "/d/ZWOW810Zz/dashboard-alertas?var-host=$outrosHosts&var-group=All"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": "auto",
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeat": "outrosHosts",
+        "repeatDirection": "h",
+        "scopedVars": {
+          "outrosHosts": {
+            "selected": false,
+            "text": "ALB - 2Listen Prod",
+            "value": "ALB - 2Listen Prod"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$outrosGrupos"
+            },
+            "host": {
+              "filter": "$outrosHosts"
+            },
+            "item": {
+              "filter": ""
+            },
+            "options": {
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": 4,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$outrosHosts",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": true,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 12,
+          "x": 12,
+          "y": 10
+        },
+        "id": 295,
+        "interval": null,
+        "links": [
+          {
+            "targetBlank": true,
+            "title": "$outrosHosts",
+            "url": "/d/ZWOW810Zz/dashboard-alertas?var-host=$outrosHosts&var-group=All"
+          }
+        ],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": "auto",
+        "maxPerRow": 12,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "repeatDirection": "h",
+        "repeatIteration": 1616006916089,
+        "repeatPanelId": 292,
+        "scopedVars": {
+          "outrosHosts": {
+            "selected": false,
+            "text": "ALB - 2listen-homolog-admin",
+            "value": "ALB - 2listen-homolog-admin"
+          }
+        },
+        "sparkline": {
+          "fillColor": "rgba(31, 118, 189, 0.18)",
+          "full": false,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": false,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "functions": [],
+            "group": {
+              "filter": "$outrosGrupos"
+            },
+            "host": {
+              "filter": "$outrosHosts"
+            },
+            "item": {
+              "filter": ""
+            },
+            "options": {
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": 4,
+            "refId": "A",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2,
+              "count": true,
+              "minSeverity": 3
+            }
+          }
+        ],
+        "thresholds": "1,2",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$outrosHosts",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+          }
+        ],
+        "valueName": "current"
+      }
+    ],
+    "schemaVersion": 27,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "tags": [],
+            "text": "All",
+            "value": [
+              "$__all"
+            ]
+          },
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "Grupo de Servidores",
+          "multi": true,
+          "name": "grupoServidores",
+          "options": [
+            {
+              "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "Discovered hosts",
+              "value": "Discovered hosts"
+            },
+            {
+              "selected": false,
+              "text": "Linux servers",
+              "value": "Linux servers"
+            },
+            {
+              "selected": false,
+              "text": "Windows servers",
+              "value": "Windows servers"
+            },
+            {
+              "selected": false,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          ],
+          "query": "Discovered hosts, Linux servers, Windows servers, Zabbix servers",
+          "skipUrlSync": false,
+          "type": "custom"
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "$grupoServidores.*",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "Hosts de Instancias",
+          "multi": true,
+          "name": "hostsServidores",
+          "options": [],
+          "query": "$grupoServidores.*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "text": "RDS",
+            "value": "RDS"
+          },
+          "description": null,
+          "error": null,
+          "hide": 2,
+          "includeAll": false,
+          "label": "Grupo RDS",
+          "multi": false,
+          "name": "grupoRDS",
+          "options": [
+            {
+              "selected": true,
+              "text": "RDS",
+              "value": "RDS"
+            }
+          ],
+          "query": "RDS",
+          "skipUrlSync": false,
+          "type": "custom"
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "$grupoRDS.*",
+          "description": null,
+          "error": null,
+          "hide": 2,
+          "includeAll": true,
+          "label": "Hosts RDS",
+          "multi": true,
+          "name": "hostsRDS",
+          "options": [],
+          "query": "$grupoRDS.*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "text": "Monitoramento - URL",
+            "value": "Monitoramento - URL"
+          },
+          "description": null,
+          "error": null,
+          "hide": 2,
+          "includeAll": false,
+          "label": "URL",
+          "multi": false,
+          "name": "grupoURL",
+          "options": [
+            {
+              "selected": true,
+              "text": "Monitoramento - URL",
+              "value": "Monitoramento - URL"
+            }
+          ],
+          "query": "Monitoramento - URL",
+          "skipUrlSync": false,
+          "type": "custom"
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "$grupoURL.*",
+          "description": null,
+          "error": null,
+          "hide": 2,
+          "includeAll": true,
+          "label": "",
+          "multi": true,
+          "name": "hostsURL",
+          "options": [],
+          "query": "$grupoURL.*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "$grupoURL.*.*",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "URLs",
+          "multi": true,
+          "name": "applicationURL",
+          "options": [],
+          "query": "$grupoURL.*.*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "*",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "Outros Grupos",
+          "multi": true,
+          "name": "outrosGrupos",
+          "options": [],
+          "query": "*",
+          "refresh": 1,
+          "regex": "/^(?!$grupoURL)(?!$grupoRDS)(?!Discovered hosts)(?!Windows servers)(?!Zabbix servers)(?!Linux servers)(?!2LISTEN)(?!AWS).*$/",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "Zabbix",
+          "definition": "$outrosGrupos.*",
+          "description": null,
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": "Outros Hosts",
+          "multi": true,
+          "name": "outrosHosts",
+          "options": [],
+          "query": "$outrosGrupos.*",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "now-1y",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "id": null,
+    "title": "Dashboard overview V2",
+    "uid": "9Vue2X2Wz",
+    "version": 6
+  },
+  "overwrite": true
+}

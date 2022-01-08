@@ -1,0 +1,51 @@
+---
+- name: Only run update
+  apt:
+    update_cache: yes
+
+- name: Install dependencies
+  apt:
+    name: gpg-agent
+    state: present
+
+- name: Add an Apt signing key grafana
+  apt_key:
+    url: https://packages.grafana.com/gpg.key
+    state: present
+
+- name: Install repo grafana
+  apt_repository:
+    repo: "{{ repo_grafana }}"
+    state: present
+    update_cache: true
+
+- name: Install Grafana
+  apt:
+    name: grafana
+    state: present
+
+- name: Start Grafana and enable on boot
+  service:
+    name: grafana-server
+    state: started
+    enabled: yes
+
+- name : Inserindo  Plugins Default Zabbix
+  shell: grafana-cli plugins install alexanderzobnin-zabbix-app
+
+- name: Restart Grafana 
+  service:
+    name: grafana-server
+    state: restarted
+
+- name: import dashboards
+  uri:
+    url: http://localhost:3000/api/dashboards/db
+    method: POST
+    user: "admin"
+    password: "admin"
+    body: "{{ lookup('template', item.file) }}"
+    status_code: 200
+    body_format: json
+    force_basic_auth: yes
+  with_items: "{{ grafana.dashboards }}"

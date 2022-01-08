@@ -1,0 +1,26 @@
+---
+# vars file for grafana
+
+"grafana": {"dashboards": [
+          {
+            "name": "overview",
+            "file": "./dashboard_overview.json.j2",
+            "dash_name": "overview"
+          },
+          {
+            "name": "rds",
+            "file": "./dashboard_status_rds.json.j2",
+            "dash_name": "RDS"
+          },
+          {
+            "name": "url",
+            "file": "./dashboard_url.json.j2",
+            "dash_name": "URL"
+          },
+          {
+            "name": "alertas",
+            "file": "./dashboard_alertas.json.j2",
+            "dash_name": "Alertas"
+          }
+        ]
+}
